@@ -1,34 +1,59 @@
-td {
-  border: 2px solid #333;
-  height: 100px:auto;
-  width 100px;
-  text-align: center;
-  vertical-align: middle;
-  font-family: "Comic Sans MS", cursive;
-  font-size: 70px;
-  cursor: pointer;
+body {
+	font-family: "Avenir", Helvetica, Arial, sans-serif;
+	color: #3c3c3c;
+
 }
 
 table {
-  border-collapse: collapse; //so we dont have two lines for each cell.
-  position: absolute; //so it wont be related to other things on the page
-  left; 50%; // move 50% to left - if we dont have this then the edge will be in the center.
-  margin-left: -155px; //again moves into center - the whole thing is 320px, so 320px* 2
-  top: 50px; //some space at the top as its now absolute.
+	border-collapse: collapse; // so we dont have two lines for each cell
+  position: absolute;
+  margin-left: auto;margin-right: auto; margin-top: 50px; margin-bottom: auto;//?? not sure why this way work
+
+}
+
+td {
+	border: 10px solid #FF69B4;
+	height: 150px;
+	width: 150px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 70px;
+	cursor: pointer;
+
 }
 
 table tr:first-child td {
-border-top: 0;     //removes the top line
+	border-top: 0;   //removes the top line of the box
 }
 
 table tr:last-child td {
-  border-bottom: 0; //removes the bottom line
+	border-bottom: 0; //removes the bottom line of the box
 }
 
 table tr td:first-child {
-  border-left: 0;
+	border-left: 0;   //removes left line of the box
 }
 
-table tr td: last-child {
-  border-right: 0;
+table tr td:last-child {
+	border-right: 0; //roemoves the right line of the box
+}
+button {
+  margin: 0 auto;
+}
+.endgame {
+  display: none; //this is so it is not shown until the end of the game //
+  width: 200px;
+  top: 200px;
+  background-color: #FF69B4;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-size: 2em;
+
+
 }
