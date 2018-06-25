@@ -1,0 +1,34 @@
+td {
+  border: 2px solid #333;
+  height: 100px:auto;
+  width 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 70px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse; //so we dont have two lines for each cell.
+  position: absolute; //so it wont be related to other things on the page
+  left; 50%; // move 50% to left - if we dont have this then the edge will be in the center.
+  margin-left: -155px; //again moves into center - the whole thing is 320px, so 320px* 2
+  top: 50px; //some space at the top as its now absolute.
+}
+
+table tr:first-child td {
+border-top: 0;     //removes the top line
+}
+
+table tr:last-child td {
+  border-bottom: 0; //removes the bottom line
+}
+
+table tr td:first-child {
+  border-left: 0;
+}
+
+table tr td: last-child {
+  border-right: 0;
+}
