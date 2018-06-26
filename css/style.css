@@ -1,6 +1,13 @@
 body {
-	font-family: "Avenir", Helvetica, Arial, sans-serif;
-	color: #3c3c3c;
+
+  background-color: #fdf5e2;
+
+}
+
+header {
+text-align: center;
+font-size: 22;
+font-family: fantasy;
 
 }
 
@@ -37,8 +44,12 @@ table tr td:first-child {
 table tr td:last-child {
 	border-right: 0; //roemoves the right line of the box
 }
-button {
+
+.button {
   margin: 0 auto;
+  text-align: center;
+  background-color: #4CAF50;
+  border-radius: 50%;
 }
 .endgame {
   display: none; //this is so it is not shown until the end of the game //
@@ -54,6 +65,4 @@ button {
   border-radius: 5px;
   color: white;
   font-size: 2em;
-
-
 }

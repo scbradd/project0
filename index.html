@@ -6,26 +6,29 @@
 
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<header> Tic Tac Toe </header>
+<div id="message"> Message here </div>
+<body onLoad="startGame()">
   <table>
     <tr>
-      <td class="cell" id="0"></td>
-      <td class="cell" id="1"></td>
-      <td class="cell" id="2"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
 </tr>
-      <td class="cell" id="3"></td>
-      <td class="cell" id="4"></td>
-      <td class="cell" id="5"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
 </tr>
-      <td class="cell" id="6"></td>
-      <td class="cell" id="7"></td>
-      <td class="cell" id="8"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
+      <td class="square" onClick ="nextMove(this)"></td>
 </tr>
 </table>
 <div class ="endgame">
   <div class="text"></div>
 </div>
-<button onClick="startGame()">Replay</button>
+<div class="button">
+<button onClick="startGame()">Start!</button> </div>
 <script src="jquery/jquery.js"></script>
   <script src="js/main.js"></script>
 </body>

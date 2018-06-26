@@ -1,6 +1,6 @@
 console.log('connected');
 
-var gameBoard;
+/*var gameBoard;
 const humanPlayer = '0';
 const aiPlayer = 'x';
 const winCombos = [
@@ -15,4 +15,27 @@ const winCombos = [
 ]
 
 const cells = document.querySelectorAll('.cell');
-startGame();
+startGame();*/
+
+function startGame() {
+  document.turn = "X";
+  setMessage(document.turn + "  start's first.")
+}
+
+function setMessage(msg) {
+  document.getElementById("message").innerText = msg;
+}
+
+function nextMove(square) {
+  
+  square.innerText = document.turn;
+  switchTurn();
+}
+
+function switchTurn() {
+  if(document.turn == "X") {
+    document.turn = "0";
+  } else {
+    document.turn = "X";
+  }
+}
