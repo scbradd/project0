@@ -16,8 +16,9 @@ function nextMove(square) {
   } else if(square.innerText == '') {
   square.innerText = document.turn;
   switchTurn();
-} else {
-  setMessage('Pick another square');
+  } else {
+    setMessage('Pick another square');
+  }
 }
 
 function switchTurn() {
@@ -33,7 +34,7 @@ function switchTurn() {
 
 }
 
-function checkRow(a, b, c, move) {
+const checkRow = function (a, b, c, move) {
   var result = false;
   if (getBox(a) == move && getBox(b) == move && getBox(c) == move) {
     result = true;
@@ -42,7 +43,7 @@ function checkRow(a, b, c, move) {
 }
 
 function getBox(number) {
-  return document.getElementById('s' + number).innnerText;
+  return document.getElementById('s' + number).innerText;
 }
 
 function checkForWinner(move) {
@@ -57,7 +58,6 @@ function checkForWinner(move) {
   (checkRow(3, 5, 7, move))) {
   result = true;
 }
+console.log(result);
 return result;
-}
-
 }
