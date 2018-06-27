@@ -1,41 +1,63 @@
 console.log('connected');
 
-/*var gameBoard;
-const humanPlayer = '0';
-const aiPlayer = 'x';
-const winCombos = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [6, 4, 2],
-]
-
-const cells = document.querySelectorAll('.cell');
-startGame();*/
-
 function startGame() {
   document.turn = "X";
+  document.winner = null;
   setMessage(document.turn + "  start's first.")
 }
 
 function setMessage(msg) {
-  document.getElementById("message").innerText = msg;
+  $('#message').text(msg);
 }
 
 function nextMove(square) {
-  
+  if(document.winner != null) {
+    setMessage(document.turn + "already won.")
+  } else if(square.innerText == '') {
   square.innerText = document.turn;
   switchTurn();
+} else {
+  setMessage('Pick another square');
 }
 
 function switchTurn() {
-  if(document.turn == "X") {
+  if(checkForWinner(document.turn)) {
+    setMessage("Congratulations" + document.turn +  "you have won.")
+  } else if(document.turn == "X") {
     document.turn = "0";
+    setMessage("It's " + document.turn + "'s Turn.")
   } else {
     document.turn = "X";
+    setMessage("It's " + document.turn + "'s Turn.")
   }
+
+}
+
+function checkRow(a, b, c, move) {
+  var result = false;
+  if (getBox(a) == move && getBox(b) == move && getBox(c) == move) {
+    result = true;
+  }
+  return result;
+}
+
+function getBox(number) {
+  return document.getElementById('s' + number).innnerText;
+}
+
+function checkForWinner(move) {
+  var result = false;
+  if (checkRow(1, 2, 3, move) ||
+  (checkRow(4, 5, 6, move)) ||
+  (checkRow(7, 8, 9, move)) ||
+  (checkRow(1, 4, 7, move)) ||
+  (checkRow(2, 5, 8, move)) ||
+  (checkRow(3, 6, 9, move)) ||
+  (checkRow(1, 5, 9, move)) ||
+  (checkRow(3, 5, 7, move))) {
+  result = true;
+}
+return result;
+}
+
 }
