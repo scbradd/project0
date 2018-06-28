@@ -1,34 +1,41 @@
 body {
-background: url("http://img.freepik.com/free-photo/pink-wooden-surface-with-decorative-twigs_23-2147600605.jpg?size=338&ext=jpg");
+background: url("https://img00.deviantart.net/dfd9/i/2015/140/a/e/chalkboard_by_lorelinde-d8u2l4g.jpg");
+background-size: cover;
 /*background-color: #fdf5e2;
 
 } */
 }
 
 header {
-text-align: center;
-font-size: 80;
+text-align: left;
+font-size: 60px;
 font-weight: bold;
 font-family: comic sans-serif;
+font-family: 'Amatic SC', cursive;
+color:#FF69B4;
+}
 
+.button {
+  text-align: center;
 }
 
 table {
 	border-collapse: collapse; // so we dont have two lines for each cell
   position: absolute;
-  margin-left: auto;margin-right: auto; margin-top: 50px; margin-bottom: auto;//?? not sure why this way work
+  margin-left: auto;margin-right: auto; margin-top: 30px; margin-bottom: auto;//?? not sure why this way work
 
 }
 
 td {
-	border: 10px solid #FF69B4;
+	border: 5px solid #ffffff;
 	height: 150px;
 	width: 150px;
 	text-align: center;
 	vertical-align: middle;
-	font-size: 70px;
+	font-size: 110px;
 	cursor: pointer;
-
+  color: white;
+  font-family: 'Amatic SC', cursive;
 }
 
 table tr:first-child td {
@@ -47,24 +54,28 @@ table tr td:last-child {
 	border-right: 0; //roemoves the right line of the box
 }
 
-.button {
-  margin: 0 auto;
-  text-align: center;
-
-}
 #reset {
-  background-color: red;
+  background-color: black;
   width: 70px;
   height: 50px;
   font-size: 15px;
+  color: white;
+  border-radius: 12px;
 }
+
+
 #message {
   text-align: center;
-  font-size: 80;
+  font-size: 60px;
   font-weight: bold;
   font-family: sans-serif;
   margin: 0 auto;
+  color: #FF69B4;
+  font-family: 'Amatic SC', cursive;
+  border-radius: 0 0 0 150px ;
 }
+
+
 
 /*.endgame {
   display: none; //this is so it is not shown until the end of the game //
