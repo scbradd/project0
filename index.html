@@ -7,28 +7,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <header> Tic Tac Toe </header>
-<div id="message"> Message here </div>
+
 <body onLoad="startGame()">
+  <div id="message"> Message here </div>
   <table>
     <tr>
-      <td class="square" id="s1" onClick ="nextMove(this)"></td>
-      <td class="square" id="s2" onClick ="nextMove(this)"></td>
-      <td class="square" id="s3" onClick ="nextMove(this)"></td>
+      <td class="square" id="s1"></td>
+      <td class="square" id="s2"></td>
+      <td class="square" id="s3"></td>
 </tr>
-      <td class="square" id="s4" onClick ="nextMove(this)"></td>
-      <td class="square" id="s5" onClick ="nextMove(this)"></td>
-      <td class="square" id="s6" onClick ="nextMove(this)"></td>
+      <td class="square" id="s4"></td>
+      <td class="square" id="s5"></td>
+      <td class="square" id="s6"></td>
 </tr>
-      <td class="square" id="s7" onClick ="nextMove(this)"></td>
-      <td class="square" id="s8" onClick ="nextMove(this)"></td>
-      <td class="square" id="s9" onClick ="nextMove(this)"></td>
+      <td class="square" id="s7"></td>
+      <td class="square" id="s8"></td>
+      <td class="square" id="s9"></td>
 </tr>
 </table>
 <div class ="endgame">
   <div class="text"></div>
 </div>
 <div class="button">
-<button onClick="startGame()">Start!</button> </div>
+<button id='reset' onClick="startGame()">Reset!</button> </div>
 <script src="jquery/jquery.js"></script>
 <script src="js/main.js"></script>
 </body>
